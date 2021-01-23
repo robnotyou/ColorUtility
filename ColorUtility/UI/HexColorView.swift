@@ -18,9 +18,9 @@ struct HexColorView: View {
     
     var body: some View {
         VStack {
-            Text("Hex Color")
-                .background(colorManager.isCopyingCode ? Color(NSColor.selectedTextBackgroundColor) : Color.clear)
-            CopyView()
+            InputHexColorView()
+            GeneratedUIColorView()
+                .padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
         }
     }
 }

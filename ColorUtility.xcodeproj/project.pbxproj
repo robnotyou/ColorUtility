@@ -15,6 +15,8 @@
 		D42C74A525BC125C00A2309D /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74A425BC125C00A2309D /* ColorManager.swift */; };
 		D42C74A925BC174F00A2309D /* HexColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74A825BC174F00A2309D /* HexColorView.swift */; };
 		D42C74AC25BC18DF00A2309D /* UtilitiesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74AB25BC18DF00A2309D /* UtilitiesTabView.swift */; };
+		D42C74B025BC1E9D00A2309D /* GeneratedUIColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74AF25BC1E9D00A2309D /* GeneratedUIColorView.swift */; };
+		D42C74B425BC21AE00A2309D /* InputHexColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74B325BC21AE00A2309D /* InputHexColorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		D42C74A425BC125C00A2309D /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		D42C74A825BC174F00A2309D /* HexColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorView.swift; sourceTree = "<group>"; };
 		D42C74AB25BC18DF00A2309D /* UtilitiesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTabView.swift; sourceTree = "<group>"; };
+		D42C74AF25BC1E9D00A2309D /* GeneratedUIColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedUIColorView.swift; sourceTree = "<group>"; };
+		D42C74B325BC21AE00A2309D /* InputHexColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputHexColorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 			children = (
 				D42C74AB25BC18DF00A2309D /* UtilitiesTabView.swift */,
 				D42C74A825BC174F00A2309D /* HexColorView.swift */,
+				D42C74B325BC21AE00A2309D /* InputHexColorView.swift */,
+				D42C74AF25BC1E9D00A2309D /* GeneratedUIColorView.swift */,
 				D42C74A025BC11AF00A2309D /* CopyView.swift */,
 			);
 			path = UI;
@@ -181,6 +187,8 @@
 				D42C74A925BC174F00A2309D /* HexColorView.swift in Sources */,
 				D42C747F25BC0E6D00A2309D /* ColorUtilityApp.swift in Sources */,
 				D42C74A125BC11AF00A2309D /* CopyView.swift in Sources */,
+				D42C74B425BC21AE00A2309D /* InputHexColorView.swift in Sources */,
+				D42C74B025BC1E9D00A2309D /* GeneratedUIColorView.swift in Sources */,
 				D42C74A525BC125C00A2309D /* ColorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,7 @@ class ColorManager: ObservableObject { /// 'coz we're using Combine, innit!
     
     let name = "Rob's Color Utility"
     
+    @Published var generatedCode: String = "UIColor() // generated code"
     @Published var isCopyingCode: Bool = false /// used to flash text, on Copying
     
     
