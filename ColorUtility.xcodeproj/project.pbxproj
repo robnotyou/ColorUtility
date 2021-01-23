@@ -15,11 +15,13 @@
 		D42C74A525BC125C00A2309D /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74A425BC125C00A2309D /* ColorManager.swift */; };
 		D42C74A925BC174F00A2309D /* HexColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74A825BC174F00A2309D /* HexColorView.swift */; };
 		D42C74AC25BC18DF00A2309D /* UtilitiesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74AB25BC18DF00A2309D /* UtilitiesTabView.swift */; };
-		D42C74B025BC1E9D00A2309D /* GeneratedColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74AF25BC1E9D00A2309D /* GeneratedColorView.swift */; };
 		D42C74B425BC21AE00A2309D /* InputHexColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74B325BC21AE00A2309D /* InputHexColorView.swift */; };
 		D45427C625BC58150079BA89 /* NSColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45427C525BC58150079BA89 /* NSColor+Utility.swift */; };
-		D45427D025BC761E0079BA89 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45427CF25BC761E0079BA89 /* PickerView.swift */; };
+		D45427D025BC761E0079BA89 /* PlatformPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45427CF25BC761E0079BA89 /* PlatformPickerView.swift */; };
 		D45427D325BC788E0079BA89 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45427D225BC788E0079BA89 /* Platform.swift */; };
+		D45427DE25BC84270079BA89 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45427DD25BC84270079BA89 /* ResultsView.swift */; };
+		D45427E125BC845A0079BA89 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45427E025BC845A0079BA89 /* SettingsView.swift */; };
+		D45427E525BC84A80079BA89 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45427E425BC84A80079BA89 /* ControlsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +36,13 @@
 		D42C74A425BC125C00A2309D /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		D42C74A825BC174F00A2309D /* HexColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorView.swift; sourceTree = "<group>"; };
 		D42C74AB25BC18DF00A2309D /* UtilitiesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTabView.swift; sourceTree = "<group>"; };
-		D42C74AF25BC1E9D00A2309D /* GeneratedColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedColorView.swift; sourceTree = "<group>"; };
 		D42C74B325BC21AE00A2309D /* InputHexColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputHexColorView.swift; sourceTree = "<group>"; };
 		D45427C525BC58150079BA89 /* NSColor+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Utility.swift"; sourceTree = "<group>"; };
-		D45427CF25BC761E0079BA89 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		D45427CF25BC761E0079BA89 /* PlatformPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformPickerView.swift; sourceTree = "<group>"; };
 		D45427D225BC788E0079BA89 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		D45427DD25BC84270079BA89 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		D45427E025BC845A0079BA89 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D45427E425BC84A80079BA89 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +127,9 @@
 			children = (
 				D42C74A825BC174F00A2309D /* HexColorView.swift */,
 				D42C74B325BC21AE00A2309D /* InputHexColorView.swift */,
-				D42C74AF25BC1E9D00A2309D /* GeneratedColorView.swift */,
-				D45427CF25BC761E0079BA89 /* PickerView.swift */,
-				D42C74A025BC11AF00A2309D /* CopyView.swift */,
+				D45427D925BC83A00079BA89 /* Settings */,
+				D45427DC25BC83C70079BA89 /* Results */,
+				D45427DB25BC83B90079BA89 /* Controls */,
 			);
 			path = "Hex Color";
 			sourceTree = "<group>";
@@ -136,6 +140,32 @@
 				D45427C525BC58150079BA89 /* NSColor+Utility.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D45427D925BC83A00079BA89 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D45427E025BC845A0079BA89 /* SettingsView.swift */,
+				D45427CF25BC761E0079BA89 /* PlatformPickerView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D45427DB25BC83B90079BA89 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				D45427E425BC84A80079BA89 /* ControlsView.swift */,
+				D42C74A025BC11AF00A2309D /* CopyView.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		D45427DC25BC83C70079BA89 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				D45427DD25BC84270079BA89 /* ResultsView.swift */,
+			);
+			path = Results;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,12 +241,14 @@
 				D45427D325BC788E0079BA89 /* Platform.swift in Sources */,
 				D45427C625BC58150079BA89 /* NSColor+Utility.swift in Sources */,
 				D42C74AC25BC18DF00A2309D /* UtilitiesTabView.swift in Sources */,
-				D45427D025BC761E0079BA89 /* PickerView.swift in Sources */,
+				D45427D025BC761E0079BA89 /* PlatformPickerView.swift in Sources */,
+				D45427E525BC84A80079BA89 /* ControlsView.swift in Sources */,
 				D42C74A925BC174F00A2309D /* HexColorView.swift in Sources */,
+				D45427DE25BC84270079BA89 /* ResultsView.swift in Sources */,
 				D42C747F25BC0E6D00A2309D /* ColorUtilityApp.swift in Sources */,
 				D42C74A125BC11AF00A2309D /* CopyView.swift in Sources */,
 				D42C74B425BC21AE00A2309D /* InputHexColorView.swift in Sources */,
-				D42C74B025BC1E9D00A2309D /* GeneratedColorView.swift in Sources */,
+				D45427E125BC845A0079BA89 /* SettingsView.swift in Sources */,
 				D42C74A525BC125C00A2309D /* ColorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

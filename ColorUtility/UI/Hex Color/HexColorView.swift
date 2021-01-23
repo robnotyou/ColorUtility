@@ -17,9 +17,10 @@ struct HexColorView: View {
     var body: some View {
         VStack {
             InputHexColorView()
-            GeneratedColorView()
-                .padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
+            Divider()
+            ResultsView()
         }
+        .padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
     }
 }
 

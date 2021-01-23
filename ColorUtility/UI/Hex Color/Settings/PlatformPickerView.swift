@@ -1,5 +1,5 @@
 //
-//  PickerView.swift
+//  PlatformPickerView.swift
 //  ColorUtility
 //
 //  Created by Rob on 23/01/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PickerView: View {
+struct PlatformPickerView: View {
     
     @EnvironmentObject var colorManager: ColorManager
     
@@ -22,9 +22,9 @@ struct PickerView: View {
     }
 }
 
-struct PickerView_Previews: PreviewProvider {
+struct PlatformPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        PickerView()
+        PlatformPickerView()
             .environmentObject(ColorManager())
     }
 }

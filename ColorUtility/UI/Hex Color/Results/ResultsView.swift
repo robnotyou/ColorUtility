@@ -1,5 +1,5 @@
 //
-//  InfoView.swift
+//  ResultsView.swift
 //  ColorUtility
 //
 //  Created by Rob on 23/01/2021.
@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-/// **GeneratedColorView**
+/// **ResultsView**
 ///
-/// * Shows the generated color's Swift code
-/// * And a "Copy" (to clipboard) button
+/// * "Settings" area
+/// * The generated color's Swift code
+/// * "Copy" (to clipboard) button
 ///
-struct GeneratedColorView: View {
+struct ResultsView: View {
     
     private let placeholderText = "Enter an 8-digit hex color, or a 6-digit hex color and (optional) % alpha"
     
@@ -20,19 +21,19 @@ struct GeneratedColorView: View {
     
     var body: some View {
         HStack {
-            PickerView()
+            SettingsView()
             Divider()
             Text(colorManager.color?.asSwiftCode(forPlatform: colorManager.platform) ?? placeholderText)
                 .background(colorManager.isCopyingCode ? Color(NSColor.selectedTextBackgroundColor) : Color.clear)
             Spacer()
-            CopyView()
+            ControlsView()
         }
     }
 }
 
-struct InfoView_Previews: PreviewProvider {
+struct ResultsView_Previews: PreviewProvider {
     static var previews: some View {
-        GeneratedColorView()
+        ResultsView()
             .environmentObject(ColorManager())
     }
 }
