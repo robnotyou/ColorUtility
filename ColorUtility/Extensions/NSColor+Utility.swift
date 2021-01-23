@@ -11,8 +11,6 @@ extension NSColor {
     
     /// **asSwift()** Return Swift code to create the color
     ///
-    /// *
-    ///
     func asSwiftCode() -> String {
         func componentAsString(_ cgFloat: CGFloat) -> String {
             formatter.string(from: NSNumber(floatLiteral: Double(cgFloat))) ?? "0"

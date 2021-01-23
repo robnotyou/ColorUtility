@@ -9,7 +9,7 @@ import SwiftUI
 
 /// **GeneratedColorView**
 ///
-/// * Shows the generated code
+/// * Shows the generated color's Swift code
 /// * And a "Copy" (to clipboard) button
 ///
 struct GeneratedColorView: View {
@@ -23,6 +23,7 @@ struct GeneratedColorView: View {
             Text(colorManager.color?.asSwiftCode() ?? placeholderText)
                 .background(colorManager.isCopyingCode ? Color(NSColor.selectedTextBackgroundColor) : Color.clear)
             Spacer()
+            PickerView()
             CopyView()
         }
     }

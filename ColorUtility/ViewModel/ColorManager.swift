@@ -6,6 +6,7 @@
 //
 
 import AppKit
+import SwiftUI
 
 /// **ColorManager**
 ///
@@ -17,6 +18,7 @@ class ColorManager: ObservableObject { /// 'coz we're using Combine, innit!
     
     let name = "Rob's Color Utility"
     
+    @State var platform = Platform.iOS /// Choosable by the user
     @Published private (set) var color: NSColor? /// Entered by the user
     @Published private (set) var isCopyingCode: Bool = false /// used to flash text, on Copying
     
