@@ -9,14 +9,27 @@ import SwiftUI
 
 /// **InputHexColorView**
 ///
-/// * Allow the user to input a hex color
+/// * Allow the user to input a hexColor, and an alpha
 ///
 struct InputHexColorView: View {
     
+    @State fileprivate var hexColor: String = ""
+    @State fileprivate var alpha: String = ""
     @EnvironmentObject var colorManager: ColorManager
 
     var body: some View {
-        Text("Input Hex Color...")
+        HStack {
+            Text("Hex Color:")
+            TextField("Enter hex color...", text: $hexColor, onCommit: {
+                colorManager.didEnter(hexColor: hexColor, alpha: alpha)
+            })
+            Text("Alpha (%):")
+            TextField("Enter Alpha...", text: $alpha, onCommit: {
+                colorManager.didEnter(hexColor: hexColor, alpha: alpha)
+            })
+        }
+        .padding()
+        .border(Color.gray, width: 1)
     }
 }
 

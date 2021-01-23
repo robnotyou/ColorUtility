@@ -18,10 +18,7 @@ struct CopyView: View {
     
     var body: some View {
         Button(action: {
-            let pasteboard = NSPasteboard.general
-            pasteboard.clearContents()
-            pasteboard.writeObjects([colorManager.name as NSString])
-            colorManager.indicateCopyAction()
+            colorManager.copyToClipboard(colorManager.generatedCode)
         }) {
             Text("Copy")
         }
