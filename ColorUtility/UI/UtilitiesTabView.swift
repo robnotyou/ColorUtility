@@ -17,15 +17,12 @@ struct UtilitiesTabView: View {
     
     var body: some View {
         TabView {
-            
             HexColorView()
                 .tabItem {
                     Text("Hex Color")
                 }
-            
             Text("Other tabs can be added later...")
                 .tabItem{
-                    Image(systemName: "studentdesk")
                     Text("Other tabs...")
             }
         }

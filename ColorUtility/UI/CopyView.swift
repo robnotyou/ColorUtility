@@ -8,24 +8,25 @@
 import SwiftUI
 import MapKit
 
-//struct CopyView: View {
-//    let mapManager: MapManager
-//    
-//    var body: some View {
-//        Button(action: {
-//            let pasteboard = NSPasteboard.general
-//            pasteboard.clearContents()
-//            pasteboard.writeObjects([self.mapManager.mapItem.gpxString(decimalPlaces: self.mapManager.decimalPlaces) as NSString])
-//            //mapTextField.flashHighlight() // indicate that text was copied
-//            self.mapManager.indicateCopyAction()
-//        }) {
-//            Text("Copy")
-//        }
-//    }
-//}
-//
-//struct CopyView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CopyView(mapManager: MapManager.testMap)
-//    }
-//}
+struct CopyView: View {
+    
+    @EnvironmentObject var colorManager: ColorManager
+    
+    var body: some View {
+        Button(action: {
+            let pasteboard = NSPasteboard.general
+            pasteboard.clearContents()
+            pasteboard.writeObjects([colorManager.name as NSString])
+            colorManager.indicateCopyAction()
+        }) {
+            Text("Copy")
+        }
+    }
+}
+
+struct CopyView_Previews: PreviewProvider {
+    static var previews: some View {
+        CopyView()
+            .environmentObject(ColorManager())
+    }
+}

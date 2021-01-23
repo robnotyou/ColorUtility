@@ -17,4 +17,19 @@ import Foundation
 class ColorManager: ObservableObject { /// 'coz we're using Combine, innit!
     
     let name = "Rob's Color Utility"
+    
+    @Published var isCopyingCode: Bool = false /// used to flash text, on Copying
+    
+    
+    
+    // MARK: - Intents
+
+    func indicateCopyAction() {
+        /// Will momentarily highlight the text, then restore to normal...
+        isCopyingCode = true
+        let delay = 250 /// milliseconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(delay)) {
+            self.isCopyingCode = false
+        }
+    }
 }

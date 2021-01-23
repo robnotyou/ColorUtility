@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct HexColorView: View {
+    
+    @EnvironmentObject var colorManager: ColorManager
+    
     var body: some View {
-        Text("Hex Color")
+        VStack {
+            Text("Hex Color")
+                .background(colorManager.isCopyingCode ? Color(NSColor.selectedTextBackgroundColor) : Color.clear)
+            CopyView()
+        }
     }
 }
 
