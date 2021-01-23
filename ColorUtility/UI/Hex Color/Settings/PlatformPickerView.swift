@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/// **PlatformPickerView**
+///
+/// * Allows the user to choose the target platform
+///
 struct PlatformPickerView: View {
     
     @EnvironmentObject var colorManager: ColorManager

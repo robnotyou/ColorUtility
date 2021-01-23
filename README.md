@@ -1,7 +1,7 @@
 #  Rob's Color Utility
 
 Provides various color-processing utilities
-{Or at least, one utility... for now.}
+{Or at least, one utility... for now}
 Uses SwiftUI, and Combine
 
 ### Usage

@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/// **ControlsView**
+///
+/// * Actions that can be performed
+///
 struct ControlsView: View {
     var body: some View {
         VStack {

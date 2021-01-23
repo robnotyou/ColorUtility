@@ -10,7 +10,7 @@ import SwiftUI
 /// **CopyView**
 ///
 /// * Copy code to the clipboard
-/// * Momentarily flash the code, to indicate that it was copied
+/// * (The code will momentarily flash, to indicate that it was copied
 ///
 struct CopyView: View {
     
@@ -18,7 +18,7 @@ struct CopyView: View {
     
     var body: some View {
         Button(action: {
-            colorManager.copyToClipboard(colorManager.color?.asSwiftCode(forPlatform: colorManager.platform) ?? "")
+            colorManager.copyResultToClipboard()
         }) {
             Text("Copy")
         }

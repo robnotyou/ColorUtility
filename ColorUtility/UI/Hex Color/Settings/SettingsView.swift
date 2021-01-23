@@ -7,7 +7,12 @@
 
 import SwiftUI
 
+/// **SettingsView**
+///
+/// * Available settings, that the user can customize
+///
 struct SettingsView: View {
+    
     var body: some View {
         VStack {
             PlatformPickerView()
@@ -19,5 +24,6 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
+            .environmentObject(ColorManager())
     }
 }

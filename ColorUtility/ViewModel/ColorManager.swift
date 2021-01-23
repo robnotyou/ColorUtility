@@ -40,8 +40,12 @@ class ColorManager: ObservableObject { /// 'coz we're using Combine, innit!
         }
     }
     
+    func copyResultToClipboard() {
+        copyToClipboard(color?.asSwiftCode(forPlatform: platform) ?? "")
+    }
+    
     /// Copy the given string, to the Clipboard
-    func copyToClipboard(_ string: String) {
+    private func copyToClipboard(_ string: String) {
         let pasteboard = NSPasteboard.general
         pasteboard.clearContents()
         pasteboard.writeObjects([string as NSString])

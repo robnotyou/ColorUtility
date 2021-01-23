@@ -127,8 +127,8 @@
 			children = (
 				D42C74A825BC174F00A2309D /* HexColorView.swift */,
 				D42C74B325BC21AE00A2309D /* InputHexColorView.swift */,
-				D45427D925BC83A00079BA89 /* Settings */,
 				D45427DC25BC83C70079BA89 /* Results */,
+				D45427D925BC83A00079BA89 /* Settings */,
 				D45427DB25BC83B90079BA89 /* Controls */,
 			);
 			path = "Hex Color";
