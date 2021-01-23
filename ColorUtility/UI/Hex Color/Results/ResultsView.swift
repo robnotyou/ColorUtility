@@ -23,7 +23,7 @@ struct ResultsView: View {
         HStack {
             SettingsView()
             Divider()
-            Text(colorManager.color?.asSwiftCode(forPlatform: colorManager.platform) ?? placeholderText)
+            Text(colorManager.colorResult ?? placeholderText)
                 .background(colorManager.isCopyingCode ? Color(NSColor.selectedTextBackgroundColor) : Color.clear)
             Spacer()
             ControlsView()
@@ -34,6 +34,6 @@ struct ResultsView: View {
 struct ResultsView_Previews: PreviewProvider {
     static var previews: some View {
         ResultsView()
-            .environmentObject(ColorManager())
+            .environmentObject(ColorManager.testManager)
     }
 }

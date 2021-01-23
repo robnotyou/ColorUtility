@@ -10,7 +10,7 @@ import SwiftUI
 /// **CopyView**
 ///
 /// * Copy code to the clipboard
-/// * (The code will momentarily flash, to indicate that it was copied
+/// * (The code will momentarily flash, to indicate that it was copied)
 ///
 struct CopyView: View {
     

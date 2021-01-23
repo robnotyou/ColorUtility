@@ -17,8 +17,8 @@ struct PlatformPickerView: View {
     
     var body: some View {
         Picker(selection: $colorManager.platform, label: Text("Platform:")) {
-            ForEach(Platform.allCases, id: \.rawValue) { p in
-                Text(p.rawValue).tag(p)
+            ForEach(Platform.allCases, id: \.rawValue) { platform in
+                Text(platform.rawValue).tag(platform)
                     .fixedSize(horizontal: true, vertical: false)
             }
         }

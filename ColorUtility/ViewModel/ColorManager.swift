@@ -22,26 +22,26 @@ class ColorManager: ObservableObject { /// 'coz we're using Combine, innit!
     @Published private (set) var color: NSColor? /// Generated from the user's entered values
     @Published private (set) var isCopyingCode: Bool = false /// used to flash text, on Copying
     
+    var colorResult: String? {
+        color?.asSwiftCode(forPlatform: platform)
+    }
+    
     // MARK: - Intents
     
     /// **didEnter(hexColor:alpha:)
     ///
     /// The user entered a hexColor, or an alpha
     /// Convert to NSColor
-    /// set "generatedCode" to the equivalent Swift code (for UIColor/NSColor)
+    /// Copy to Clipboard
     ///
     func didEnter(hexColor: String, alpha: String) {
-        let alphaFloat = CGFloat(Double(alpha) ?? 0)
-        if let userColor = NSColor(hex: hexColor, alphaPercent: alphaFloat) {
-            color = userColor
-            copyToClipboard(userColor.asSwiftCode(forPlatform: platform))
-        } else {
-            color = nil
-        }
+        let alphaFloat = CGFloat(Double(alpha) ?? 100)
+        color = NSColor(hex: hexColor, alphaPercent: alphaFloat)
+        copyResultToClipboard()
     }
     
     func copyResultToClipboard() {
-        copyToClipboard(color?.asSwiftCode(forPlatform: platform) ?? "")
+        copyToClipboard(colorResult ?? "")
     }
     
     /// Copy the given string, to the Clipboard
@@ -62,4 +62,17 @@ class ColorManager: ObservableObject { /// 'coz we're using Combine, innit!
             self.isCopyingCode = false
         }
     }
+}
+
+
+
+// MARK: - TestManager
+/// e.g. for Previews
+extension ColorManager {
+    
+    static var testManager: ColorManager = {
+        let manager = ColorManager()
+        manager.didEnter(hexColor: "0a0a0a", alpha: "45")
+        return manager
+    }()
 }

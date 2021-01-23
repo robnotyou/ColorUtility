@@ -31,7 +31,7 @@ struct UtilitiesTabView: View {
 struct UtilitiesTabView_Previews: PreviewProvider {
     static var previews: some View {
         UtilitiesTabView()
-            .environmentObject(ColorManager())
+            .environmentObject(ColorManager.testManager)
     }
 }
 
