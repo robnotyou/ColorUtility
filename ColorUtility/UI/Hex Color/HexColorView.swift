@@ -10,7 +10,7 @@ import SwiftUI
 /// **HexColorView**
 ///
 /// * Allow the user to input a hex color and alpha
-/// * Show code for the equivalent UIColor
+/// * Show code for the equivalent UIColor/NSColor
 ///
 struct HexColorView: View {
     

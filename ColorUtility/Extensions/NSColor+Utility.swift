@@ -11,7 +11,9 @@ extension NSColor {
     
     /// **asSwift()** Return Swift code to create the color
     ///
-    func asSwiftCode() -> String {
+    /// * UIColor/NSColor, depending on platform
+    ///
+    func asSwiftCode(forPlatform platform: Platform) -> String {
         func componentAsString(_ cgFloat: CGFloat) -> String {
             formatter.string(from: NSNumber(floatLiteral: Double(cgFloat))) ?? "0"
         }
@@ -22,7 +24,7 @@ extension NSColor {
         let g = componentAsString(greenComponent)
         let b = componentAsString(blueComponent)
         let a = componentAsString(alphaComponent)
-        return "UIColor(red: \(r), green: \(g), blue: \(b), alpha: \(a))"
+        return "\(platform.colorObjectString)(red: \(r), green: \(g), blue: \(b), alpha: \(a))"
     }
     
     /// **init(hex:)** Create an NSColor from a hex color

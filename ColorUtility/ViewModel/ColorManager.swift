@@ -18,8 +18,8 @@ class ColorManager: ObservableObject { /// 'coz we're using Combine, innit!
     
     let name = "Rob's Color Utility"
     
-    @State var platform = Platform.iOS /// Choosable by the user
-    @Published private (set) var color: NSColor? /// Entered by the user
+    @Published var platform = Platform.iOS /// Choosable by the user
+    @Published private (set) var color: NSColor? /// Generated from the user's entered values
     @Published private (set) var isCopyingCode: Bool = false /// used to flash text, on Copying
     
     // MARK: - Intents
@@ -28,13 +28,13 @@ class ColorManager: ObservableObject { /// 'coz we're using Combine, innit!
     ///
     /// The user entered a hexColor, or an alpha
     /// Convert to NSColor
-    /// set "generatedCode" to the equivalent Swift code (for UIColor)
+    /// set "generatedCode" to the equivalent Swift code (for UIColor/NSColor)
     ///
     func didEnter(hexColor: String, alpha: String) {
         let alphaFloat = CGFloat(Double(alpha) ?? 0)
         if let userColor = NSColor(hex: hexColor, alphaPercent: alphaFloat) {
             color = userColor
-            copyToClipboard(userColor.asSwiftCode())
+            copyToClipboard(userColor.asSwiftCode(forPlatform: platform))
         } else {
             color = nil
         }

@@ -20,10 +20,11 @@ struct GeneratedColorView: View {
     
     var body: some View {
         HStack {
-            Text(colorManager.color?.asSwiftCode() ?? placeholderText)
+            PickerView()
+            Divider()
+            Text(colorManager.color?.asSwiftCode(forPlatform: colorManager.platform) ?? placeholderText)
                 .background(colorManager.isCopyingCode ? Color(NSColor.selectedTextBackgroundColor) : Color.clear)
             Spacer()
-            PickerView()
             CopyView()
         }
     }

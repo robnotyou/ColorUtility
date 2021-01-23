@@ -13,9 +13,9 @@ import SwiftUI
 ///
 struct InputHexColorView: View {
     
+    @EnvironmentObject var colorManager: ColorManager
     @State fileprivate var hexColor: String = ""
     @State fileprivate var alpha: String = ""
-    @EnvironmentObject var colorManager: ColorManager
 
     var body: some View {
         HStack {

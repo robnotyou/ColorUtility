@@ -9,11 +9,10 @@ import SwiftUI
 
 struct PickerView: View {
     
-    @State private var platform = Platform.iOS
-//    @EnvironmentObject var colorManager: ColorManager
+    @EnvironmentObject var colorManager: ColorManager
     
     var body: some View {
-        Picker(selection: $platform, label: Text("Platform:")) {
+        Picker(selection: $colorManager.platform, label: Text("Platform:")) {
             ForEach(Platform.allCases, id: \.rawValue) { p in
                 Text(p.rawValue).tag(p)
                     .fixedSize(horizontal: true, vertical: false)
@@ -26,6 +25,6 @@ struct PickerView: View {
 struct PickerView_Previews: PreviewProvider {
     static var previews: some View {
         PickerView()
-//            .environmentObject(ColorManager())
+            .environmentObject(ColorManager())
     }
 }
