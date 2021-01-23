@@ -86,10 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				D42C74AB25BC18DF00A2309D /* UtilitiesTabView.swift */,
-				D42C74A825BC174F00A2309D /* HexColorView.swift */,
-				D42C74B325BC21AE00A2309D /* InputHexColorView.swift */,
-				D42C74AF25BC1E9D00A2309D /* GeneratedUIColorView.swift */,
-				D42C74A025BC11AF00A2309D /* CopyView.swift */,
+				D42C74B725BC226D00A2309D /* Hex Color */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -111,6 +108,17 @@
 				D42C74A425BC125C00A2309D /* ColorManager.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D42C74B725BC226D00A2309D /* Hex Color */ = {
+			isa = PBXGroup;
+			children = (
+				D42C74A825BC174F00A2309D /* HexColorView.swift */,
+				D42C74B325BC21AE00A2309D /* InputHexColorView.swift */,
+				D42C74AF25BC1E9D00A2309D /* GeneratedUIColorView.swift */,
+				D42C74A025BC11AF00A2309D /* CopyView.swift */,
+			);
+			path = "Hex Color";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

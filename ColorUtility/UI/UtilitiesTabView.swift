@@ -10,10 +10,10 @@ import SwiftUI
 /// **UtilitiesTabView** This is our outermost SwiftUIView
 ///
 /// * We use a TabView to lay out our top-level custom SwiftUI views
-/// * (In general, keep this as simple as possible)
+///
 struct UtilitiesTabView: View {
     
-    @EnvironmentObject var colorManager: ColorManager
+//    @EnvironmentObject var colorManager: ColorManager
     
     var body: some View {
         TabView {
@@ -33,7 +33,7 @@ struct UtilitiesTabView: View {
 struct UtilitiesTabView_Previews: PreviewProvider {
     static var previews: some View {
         UtilitiesTabView()
-            .environmentObject(ColorManager())
+//            .environmentObject(ColorManager())
     }
 }
 

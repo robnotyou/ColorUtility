@@ -12,6 +12,9 @@ import SwiftUI
 /// * Allow the user to input a hex color
 ///
 struct InputHexColorView: View {
+    
+    @EnvironmentObject var colorManager: ColorManager
+
     var body: some View {
         Text("Input Hex Color...")
     }
@@ -20,5 +23,6 @@ struct InputHexColorView: View {
 struct InputHexColorView_Previews: PreviewProvider {
     static var previews: some View {
         InputHexColorView()
+            .environmentObject(ColorManager())
     }
 }
