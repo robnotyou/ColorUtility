@@ -15,4 +15,6 @@ import Foundation
 /// * ...and it matches my MapUtility and ImageUtility apps
 ///
 class ColorManager: ObservableObject { /// 'coz we're using Combine, innit!
+    
+    let name = "Rob's Color Utility"
 }

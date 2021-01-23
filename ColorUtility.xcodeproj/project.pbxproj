@@ -14,6 +14,7 @@
 		D42C749925BC0FC000A2309D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D42C749825BC0FC000A2309D /* README.md */; };
 		D42C74A125BC11AF00A2309D /* CopyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74A025BC11AF00A2309D /* CopyView.swift */; };
 		D42C74A525BC125C00A2309D /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74A425BC125C00A2309D /* ColorManager.swift */; };
+		D42C74A925BC174F00A2309D /* HexColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74A825BC174F00A2309D /* HexColorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		D42C749825BC0FC000A2309D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D42C74A025BC11AF00A2309D /* CopyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyView.swift; sourceTree = "<group>"; };
 		D42C74A425BC125C00A2309D /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		D42C74A825BC174F00A2309D /* HexColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				D42C748025BC0E6D00A2309D /* ContentView.swift */,
+				D42C74A825BC174F00A2309D /* HexColorView.swift */,
 				D42C74A025BC11AF00A2309D /* CopyView.swift */,
 			);
 			path = UI;
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D42C748125BC0E6D00A2309D /* ContentView.swift in Sources */,
+				D42C74A925BC174F00A2309D /* HexColorView.swift in Sources */,
 				D42C747F25BC0E6D00A2309D /* ColorUtilityApp.swift in Sources */,
 				D42C74A125BC11AF00A2309D /* CopyView.swift in Sources */,
 				D42C74A525BC125C00A2309D /* ColorManager.swift in Sources */,
