@@ -29,7 +29,6 @@ struct InputHexColorView: View {
             })
         }
         .padding()
-//        .border(Color.gray, width: 1)
     }
 }
 
