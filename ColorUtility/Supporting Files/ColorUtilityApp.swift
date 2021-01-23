@@ -15,7 +15,7 @@ struct ColorUtilityApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            UtilitiesTabView()
                 .environmentObject(colorManager)
         }
     }
