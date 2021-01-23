@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct ColorUtilityApp: App {
+    
+    // Create the colorManager
+    let colorManager = ColorManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
