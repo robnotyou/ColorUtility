@@ -18,7 +18,7 @@ struct CopyView: View {
     
     var body: some View {
         Button(action: {
-            colorManager.copyToClipboard(colorManager.generatedCode)
+            colorManager.copyToClipboard(colorManager.color?.asSwiftCode() ?? "")
         }) {
             Text("Copy")
         }

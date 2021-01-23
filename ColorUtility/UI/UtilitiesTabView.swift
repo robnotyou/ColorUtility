@@ -13,8 +13,6 @@ import SwiftUI
 ///
 struct UtilitiesTabView: View {
     
-//    @EnvironmentObject var colorManager: ColorManager
-    
     var body: some View {
         TabView {
             HexColorView()
@@ -33,7 +31,6 @@ struct UtilitiesTabView: View {
 struct UtilitiesTabView_Previews: PreviewProvider {
     static var previews: some View {
         UtilitiesTabView()
-//            .environmentObject(ColorManager())
     }
 }
 

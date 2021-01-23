@@ -9,15 +9,15 @@ import SwiftUI
 
 /// **HexColorView**
 ///
-/// * Input a hex color
-/// * Show code for UIColor
+/// * Allow the user to input a hex color and alpha
+/// * Show code for the equivalent UIColor
 ///
 struct HexColorView: View {
     
     var body: some View {
         VStack {
             InputHexColorView()
-            GeneratedUIColorView()
+            GeneratedColorView()
                 .padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
         }
     }

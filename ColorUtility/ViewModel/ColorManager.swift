@@ -17,30 +17,27 @@ class ColorManager: ObservableObject { /// 'coz we're using Combine, innit!
     
     let name = "Rob's Color Utility"
     
-    @Published private (set) var generatedCode: String = "UIColor() // generated code"
+    @Published private (set) var color: NSColor? /// Entered by the user
     @Published private (set) var isCopyingCode: Bool = false /// used to flash text, on Copying
-    
-    
     
     // MARK: - Intents
     
-    /// **ddEnter(hexColor:alpha:)
+    /// **didEnter(hexColor:alpha:)
     ///
     /// The user entered a hexColor, or an alpha
-    /// Convert to UIColor
-    /// set "generatedCode" to the equivalent Swift code
+    /// Convert to NSColor
+    /// set "generatedCode" to the equivalent Swift code (for UIColor)
     ///
     func didEnter(hexColor: String, alpha: String) {
-        // TODO: generate UIColor code, from hex color
-        if let color = NSColor(hex: hexColor, alphaPercent: Int(alpha)) {
-            print("color: \(color)")
-            generatedCode = color.asSwiftCode()
-            copyToClipboard(generatedCode)
+        if let userColor = NSColor(hex: hexColor, alphaPercent: Int(alpha)) {
+            color = userColor
+            copyToClipboard(userColor.asSwiftCode())
         } else {
-            generatedCode = "failure"
+            color = nil
         }
     }
     
+    /// Copy the given string, to the Clipboard
     func copyToClipboard(_ string: String) {
         let pasteboard = NSPasteboard.general
         pasteboard.clearContents()
@@ -48,7 +45,9 @@ class ColorManager: ObservableObject { /// 'coz we're using Combine, innit!
         indicateCopyAction()
     }
     
-    /// Will momentarily highlight the text, then restore to normal...
+    /// **indicateCopyAction()**
+    /// Used to momentarily highlight text, then restore to normal...
+    /// ...to indicate that it was copied to the Clipboard
     private func indicateCopyAction() {
         isCopyingCode = true
         let delay = 250 /// milliseconds
