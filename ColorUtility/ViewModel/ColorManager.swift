@@ -29,7 +29,8 @@ class ColorManager: ObservableObject { /// 'coz we're using Combine, innit!
     /// set "generatedCode" to the equivalent Swift code (for UIColor)
     ///
     func didEnter(hexColor: String, alpha: String) {
-        if let userColor = NSColor(hex: hexColor, alphaPercent: Int(alpha)) {
+        let alphaFloat = CGFloat(Double(alpha) ?? 0)
+        if let userColor = NSColor(hex: hexColor, alphaPercent: alphaFloat) {
             color = userColor
             copyToClipboard(userColor.asSwiftCode())
         } else {

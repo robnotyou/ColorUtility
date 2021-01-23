@@ -14,7 +14,17 @@ extension NSColor {
     /// *
     ///
     func asSwiftCode() -> String {
-        return "UIColor(red: \(self.redComponent), green: \(self.greenComponent), blue: \(self.blueComponent), alpha: \(self.alphaComponent))"
+        func componentAsString(_ cgFloat: CGFloat) -> String {
+            formatter.string(from: NSNumber(floatLiteral: Double(cgFloat))) ?? "0"
+        }
+        let formatter = NumberFormatter()
+        formatter.minimumFractionDigits = 1
+        formatter.maximumFractionDigits = 3
+        let r = componentAsString(redComponent)
+        let g = componentAsString(greenComponent)
+        let b = componentAsString(blueComponent)
+        let a = componentAsString(alphaComponent)
+        return "UIColor(red: \(r), green: \(g), blue: \(b), alpha: \(a))"
     }
     
     /// **init(hex:)** Create an NSColor from a hex color
@@ -22,7 +32,7 @@ extension NSColor {
     /// * With or without leading "#"
     /// * 6 or 8 hex digits
     ///
-    convenience init?(hex: String, alphaPercent: Int? = nil) {
+    convenience init?(hex: String, alphaPercent: CGFloat? = nil) {
         let r, g, b, a: CGFloat
         let hexColor = (hex.first == "#") ? String(hex.dropFirst()) : hex
         let scanner = Scanner(string: hexColor)
