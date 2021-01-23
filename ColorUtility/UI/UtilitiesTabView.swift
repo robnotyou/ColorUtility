@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-// MARK: - UtilitiesTabView
-// This is our outermost SwiftUIView
-// We use a TabView to lay out our top-level custom SwiftUI views
-// (In general, keep this as simple as possible)
+/// **UtilitiesTabView** This is our outermost SwiftUIView
+///
+/// * We use a TabView to lay out our top-level custom SwiftUI views
+/// * (In general, keep this as simple as possible)
 struct UtilitiesTabView: View {
     
     @EnvironmentObject var colorManager: ColorManager

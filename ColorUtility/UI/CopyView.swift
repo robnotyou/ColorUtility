@@ -8,6 +8,11 @@
 import SwiftUI
 import MapKit
 
+/// **CopyView**
+///
+/// * Copy code to the clipboard
+/// * Momentarily flash the code, to indicate that it was copied
+///
 struct CopyView: View {
     
     @EnvironmentObject var colorManager: ColorManager

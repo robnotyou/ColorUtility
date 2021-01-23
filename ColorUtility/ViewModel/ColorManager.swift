@@ -7,8 +7,7 @@
 
 import Foundation
 
-// MARK: - ColorManager
-/// ColorManager
+/// **ColorManager**
 ///
 /// * Okay, maybe overkill for a small utility...
 /// * But other functionality could be added later...

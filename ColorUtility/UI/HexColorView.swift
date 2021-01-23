@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// **HexColorView**
+///
+/// * Input a hex color
+/// * Show code for UIColor
+///
 struct HexColorView: View {
     
     @EnvironmentObject var colorManager: ColorManager
@@ -23,5 +28,6 @@ struct HexColorView: View {
 struct HexColorView_Previews: PreviewProvider {
     static var previews: some View {
         HexColorView()
+            .environmentObject(ColorManager())
     }
 }
