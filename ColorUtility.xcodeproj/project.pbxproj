@@ -53,11 +53,8 @@
 		D42C747D25BC0E6D00A2309D /* ColorUtility */ = {
 			isa = PBXGroup;
 			children = (
-				D42C747E25BC0E6D00A2309D /* ColorUtilityApp.swift */,
-				D42C748025BC0E6D00A2309D /* ContentView.swift */,
-				D42C748225BC0E6D00A2309D /* Assets.xcassets */,
-				D42C748725BC0E6D00A2309D /* Info.plist */,
-				D42C748825BC0E6D00A2309D /* ColorUtility.entitlements */,
+				D42C748F25BC0EAA00A2309D /* UI */,
+				D42C749225BC0EDC00A2309D /* Supporting Files */,
 				D42C748425BC0E6D00A2309D /* Preview Content */,
 			);
 			path = ColorUtility;
@@ -69,6 +66,25 @@
 				D42C748525BC0E6D00A2309D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D42C748F25BC0EAA00A2309D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D42C748025BC0E6D00A2309D /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D42C749225BC0EDC00A2309D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D42C748225BC0E6D00A2309D /* Assets.xcassets */,
+				D42C748825BC0E6D00A2309D /* ColorUtility.entitlements */,
+				D42C748725BC0E6D00A2309D /* Info.plist */,
+				D42C747E25BC0E6D00A2309D /* ColorUtilityApp.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,14 +284,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ColorUtility/ColorUtility.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "ColorUtility/Supporting Files/ColorUtility.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorUtility/Preview Content\"";
 				DEVELOPMENT_TEAM = RL5CUA6VNX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ColorUtility/Info.plist;
+				INFOPLIST_FILE = "ColorUtility/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -292,14 +308,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ColorUtility/ColorUtility.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "ColorUtility/Supporting Files/ColorUtility.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorUtility/Preview Content\"";
 				DEVELOPMENT_TEAM = RL5CUA6VNX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ColorUtility/Info.plist;
+				INFOPLIST_FILE = "ColorUtility/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
