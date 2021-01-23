@@ -17,7 +17,7 @@
 		D42C74AC25BC18DF00A2309D /* UtilitiesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74AB25BC18DF00A2309D /* UtilitiesTabView.swift */; };
 		D42C74B025BC1E9D00A2309D /* GeneratedUIColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74AF25BC1E9D00A2309D /* GeneratedUIColorView.swift */; };
 		D42C74B425BC21AE00A2309D /* InputHexColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74B325BC21AE00A2309D /* InputHexColorView.swift */; };
-		D42C74BD25BC2CC800A2309D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C74BC25BC2CC800A2309D /* UIColor.swift */; };
+		D45427C625BC58150079BA89 /* NSColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45427C525BC58150079BA89 /* NSColor+Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		D42C74AB25BC18DF00A2309D /* UtilitiesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTabView.swift; sourceTree = "<group>"; };
 		D42C74AF25BC1E9D00A2309D /* GeneratedUIColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedUIColorView.swift; sourceTree = "<group>"; };
 		D42C74B325BC21AE00A2309D /* InputHexColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputHexColorView.swift; sourceTree = "<group>"; };
-		D42C74BC25BC2CC800A2309D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D45427C525BC58150079BA89 /* NSColor+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Utility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 		D42C74BB25BC2CA200A2309D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D42C74BC25BC2CC800A2309D /* UIColor.swift */,
+				D45427C525BC58150079BA89 /* NSColor+Utility.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,12 +202,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45427C625BC58150079BA89 /* NSColor+Utility.swift in Sources */,
 				D42C74AC25BC18DF00A2309D /* UtilitiesTabView.swift in Sources */,
 				D42C74A925BC174F00A2309D /* HexColorView.swift in Sources */,
 				D42C747F25BC0E6D00A2309D /* ColorUtilityApp.swift in Sources */,
 				D42C74A125BC11AF00A2309D /* CopyView.swift in Sources */,
 				D42C74B425BC21AE00A2309D /* InputHexColorView.swift in Sources */,
-				D42C74BD25BC2CC800A2309D /* UIColor.swift in Sources */,
 				D42C74B025BC1E9D00A2309D /* GeneratedUIColorView.swift in Sources */,
 				D42C74A525BC125C00A2309D /* ColorManager.swift in Sources */,
 			);

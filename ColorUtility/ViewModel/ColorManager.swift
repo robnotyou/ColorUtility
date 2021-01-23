@@ -24,12 +24,21 @@ class ColorManager: ObservableObject { /// 'coz we're using Combine, innit!
     
     // MARK: - Intents
     
+    /// **ddEnter(hexColor:alpha:)
+    ///
     /// The user entered a hexColor, or an alpha
+    /// Convert to UIColor
+    /// set "generatedCode" to the equivalent Swift code
+    ///
     func didEnter(hexColor: String, alpha: String) {
-        print("hexColor: \(hexColor), alpha: \(alpha)")
         // TODO: generate UIColor code, from hex color
-        
-        copyToClipboard(generatedCode)
+        if let color = NSColor(hex: hexColor, alphaPercent: Int(alpha)) {
+            print("color: \(color)")
+            generatedCode = color.asSwiftCode()
+            copyToClipboard(generatedCode)
+        } else {
+            generatedCode = "failure"
+        }
     }
     
     func copyToClipboard(_ string: String) {
